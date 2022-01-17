@@ -6,3 +6,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+10.times { User.create!(
+    name: Faker::Name.name, 
+    email: Faker::Internet.email,
+    occupation: Faker::Job.title,
+    image_url: Faker::Avatar.image
+    )
+}
